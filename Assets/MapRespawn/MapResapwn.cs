@@ -32,7 +32,7 @@ public class MapResapwn : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.P))
         {
-            Instantiate(Player, new Vector3(gameObject.transform.position.x, 1, gameObject.transform.position.z), Quaternion.identity);
+            Instantiate(Player, new Vector3(10, 1, 10), Quaternion.identity);
         }
     }
 
