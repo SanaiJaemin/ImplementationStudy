@@ -8,6 +8,8 @@ public class MapResapwn : MonoBehaviour
     int vertical = 20;
    [SerializeField]
    private  GameObject MapTile;
+    [SerializeField]
+    private GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,15 @@ public class MapResapwn : MonoBehaviour
 
 
     }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            Instantiate(Player, new Vector3(gameObject.transform.position.x, 1, gameObject.transform.position.z), Quaternion.identity);
+        }
+    }
+
+
 
 
 }
