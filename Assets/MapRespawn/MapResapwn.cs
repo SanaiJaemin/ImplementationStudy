@@ -10,9 +10,12 @@ public class MapResapwn : MonoBehaviour
    private  GameObject MapTile;
     [SerializeField]
     private GameObject Player;
+
+
     // Start is called before the first frame update
     void Start()
     {
+
         for (int i = 0; i < vertical; i++)
         {
             for(int j = 0; j < horizontal; j++)

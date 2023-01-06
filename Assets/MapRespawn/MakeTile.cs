@@ -18,7 +18,10 @@ public class MakeTile : MonoBehaviour
 
     bool Destruction;
 
-
+    private void Start()
+    {
+        tilePrefab = null;
+    }
 
 
     // Update is called once per frame
@@ -50,7 +53,7 @@ public class MakeTile : MonoBehaviour
 
 
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -62,6 +65,10 @@ public class MakeTile : MonoBehaviour
                     {
                         Destroy(hit.transform.gameObject);
                     }
+                }
+                if(hit.transform.gameObject.tag == "Structure" )
+                {
+                    return;
                 }
                 Vector3 SpawnTilePos = new Vector3(hit.transform.position.x, 1, hit.transform.position.z);
                 if (tilePrefab != null)
